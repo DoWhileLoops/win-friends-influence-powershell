@@ -47,8 +47,7 @@ $allRgs = Get-AzResourceGroup;
 Write-Output $allRgs;
 ```
 
-### Just to confirm what we're seeing before we make and apply the tags, 
-### loop through all the resource groups, parse the client name, and write the output.
+### Just to confirm what we're seeing before we make and apply the tags, loop through all the resource groups, parse the client name, and write the output.
 #### PS uses the -gt tag instead of the > symbol (< and > are used for input/output).
 ```powershell
 Foreach($rg in $allRgs)
@@ -92,4 +91,9 @@ Foreach($rg in $allRgs)
   Clear-Variable -Name splitName
   
 }
+```
+
+### Get all resource groups again to confirm it worked.
+```powershell
+Get-AzResourceGroup
 ```
