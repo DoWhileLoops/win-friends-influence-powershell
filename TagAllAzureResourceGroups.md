@@ -1,3 +1,5 @@
+## These scripts first check to see if you have the required modules to work with Powershell, then tag each resource group appropriately.
+
 ### Get a list of all installed modules
 ```powershell
 Get-InstalledModule
@@ -14,34 +16,34 @@ $PSVersionTable.PSVersion
 Install-Module -Name Az -AllowClobber -Scope CurrentUser.
 ```
 
-### Sign in to Azure
+### Sign in to Azure:
 ```powershell
 Connect-AzAccount
 ```
 
-### Get a list of all subscriptions available
+### Get a list of all subscriptions available:
 ```powershell
 Get-InstalledModule
 ```
 
-### Connect to a different subscription
+### Connect to a different subscription:
 ```powershell
 Set-AzContext -SubscriptionId "your subscription guid here"
 ```
 
-### Get all resource groups in current subscription
+### Get all resource groups in current subscription:
 ```powershell
 Get-AzResourceGroup
 ```
 
-### Clear the console if desired
+### Clear the console if desired:
 ```powershell
 Clear-Host
 # To view the past commands, hit up and down at the command prompt.
 # Press Enter to run these again if desired.
 ```
 
-### Read all these resource groups into a variable, then print to confirm
+### Read all these resource groups into a variable, then print to confirm:
 ```powershell
 $allRgs = Get-AzResourceGroup;
 Write-Output $allRgs;
@@ -93,7 +95,7 @@ Foreach($rg in $allRgs)
 }
 ```
 
-### Get all resource groups again to confirm it worked.
+### Get all resource groups again to confirm it worked:
 ```powershell
 Get-AzResourceGroup
 ```
