@@ -9,7 +9,7 @@ Write-Output $allRgs;
 
 ### Then use Export-Csv and provide a path for the output:
 ```powershell
-$allRgs | Export-Csv -Path .\C:\Development\AllRgs.csv
+$allRgs | Export-Csv -Path C:\Development\AllRgs.csv
 ```
 
 ### Or for the brevity conscious:
